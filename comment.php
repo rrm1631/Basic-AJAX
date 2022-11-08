@@ -35,7 +35,20 @@
     
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            let commentCount = 2;
+
+            $("button").click(function(){
+                commentCount = commentCount + 2;
+                $("#comments").load("load-comments.php", {
+                    newCommentCounter: commentCount
+                }, function(){
+                    alert("it works");
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
