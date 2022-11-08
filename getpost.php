@@ -8,11 +8,27 @@
 </head>
 <body>
 
-
+    <button>Get Data</button>
+    <p id="test"></p>
    
     
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
 
+            //GET METHOD
+            $("button").click(function(){
+                $.get("test.txt", function(data, status){ //get data from test.txt
+                    $("#test").html(data);
+                    //alert(status); //checks if success or failed
+                });
+            });
+
+
+            //POST METHOD
+            
+        });
+    </script>
 </body>
 </html>
