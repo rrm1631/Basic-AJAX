@@ -1,3 +1,5 @@
 $(document).ready(function(){
-    $("#test").load();
+    $("btn").click(function(){
+        $("#test").load();
+    });
 });
