@@ -31,6 +31,7 @@
 
             <button type="submit" name="submit" id="submit" class="btn btn-primary  col-6">Submit</button>
 
+            <p id="form-message"></p>
         </div>
     </form>
 </div>
@@ -43,6 +44,31 @@
 
  <!-- JQUERY -->
  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function(){
+        $("form").submit(function(event){
+            event.preventDefault(); //prevents action and submit inside form
+            let name = $("#name").val();
+            let email = $("#email").val();
+            let gender = $("#gender").val();
+            let message = $("#message").val();
+            let submit = $("#submit").val();
+
+
+            $("#form-message").load("mail.php", {
+                //parameter = postname: value
+                name: name,
+                email: email,
+                gender: gender,
+                message: message,
+                submit: submit
+            });
+        });
+    });
+
+</script>
 
 </body>
 </html>
