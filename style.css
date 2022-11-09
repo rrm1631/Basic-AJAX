@@ -1,0 +1,16 @@
+body{
+    background: whitesmoke !important;
+}
+
+form{
+    margin: auto;
+    width: 22em;
+    text-align: center;
+}
+
+form input, form select, form textarea{
+    margin-bottom: 5px;
+}
+
+
+
