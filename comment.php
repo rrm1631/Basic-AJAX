@@ -42,7 +42,7 @@
             $("button").click(function(){
                 commentCount = commentCount + 2;
                 $("#comments").load("load-comments.php", {
-                    newCommentCounter: commentCount
+                    newCommentCounter: commentCount //passes a POST data called newCommentCounter that has the value of commentCount
                 }, function(){
                     alert("it works");
                 });

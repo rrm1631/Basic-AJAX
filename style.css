@@ -1,0 +1,26 @@
+body{
+    background: whitesmoke !important;
+}
+
+form{
+    margin: auto;
+    width: 22em;
+    text-align: center;
+}
+
+form input, form select, form textarea{
+    margin-bottom: 5px;
+}
+
+.form-error{
+    color: red;
+}
+
+.form-success{
+    color: green;
+}
+
+.input-error{
+    box-shadow: 0 0 0 1px red;
+}
+
